@@ -5,6 +5,7 @@
 
 
 [Oracle - Java Collections](https://docs.oracle.com/javase/tutorial/collections/intro/index.html)
+
 [Baeldung - Java Collections Interview Questions](https://www.baeldung.com/java-collections-interview-questions)
 
 [Microsoft - C# Collections](https://docs.microsoft.com/en-us/dotnet/standard/collections/)
@@ -12,7 +13,7 @@
 
 | I want to…  | Generic collections  |  Non-generic collections |  Thread-safe or immutable collections |
 |---|---|---|---|
-| Store items as key/value pairs for quick look-up by key  |   |   |   |
+| Store items as key/value pairs for quick look-up by key  | Dictionary<TKey,TValue>  | Hashtable (A collection of key/value pairs that are organized based on the hash code of the key.)  | ConcurrentDictionary<TKey,TValue> ReadOnlyDictionary<TKey,TValue> ImmutableDictionary<TKey,TValue>  |
 | Access items by index Use items first-in-first-out (FIFO)|   |   |   |
 | Use items first-in-first-out (FIFO)  |   |   |   |
 | Use data Last-In-First-Out (LIFO)  |   |   |   |
