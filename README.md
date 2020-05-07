@@ -47,13 +47,17 @@ NOTE:  **Synchronized** means accessible by multiple threads (thread safe).
 
 
 **Aggregate Operations**
+
 **Java**:
+
 **Pipeline** – sequence of aggregate operations which consists of
 1.	Source
 2.	Zero or more intermediate operations that produce a stream  ie: filter
 3.	Terminal operation that produces a non-stream result such as a primitive value, a collection or no value at all  ie: forEach
 **Stream** – sequence of elements; it is not a data structure; carries values from a source through a pipeline
+
 **Reduction** – JDK terminal operations (such as average, sum, min, max, and count) that return one value by combining the contents of a stream
+
 **Parallelism** – dividing a problem into subproblems, solving those problems simultaneously (in parallel, with each subproblem running in a separate thread), and then combining the results of the solutions to the subproblems
 
 ```
@@ -65,6 +69,7 @@ roster
 ```
 
 **Recursion vs Iteration**
+
 **Recursion** – stacking method call by calling itself, less code but higher time complexity, infinite recursion leads to CPU crash
 **Iteration** – looping, more code but less time complexity, infinite iteration leads to memory exhaustion
 *Use recursion for algorithms best explained recursively – trees, quicksort, DFS, divide and conquer, Tower of Hanoi, etc; use iteration for algorithms best explained iteratively - factorial.*
