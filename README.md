@@ -25,9 +25,10 @@
 
 
 Java uses *java.Utils* package
+
 C# uses *System.Collections* namespace
 
-**->Ordered vs Sorted<-**
+->Ordered vs Sorted<-
 
 An **ordered collection** means that the elements of the collection have a specific order based on the sequence inserted. The order is independent of the value. A __List__ is an example.
 A **sorted collection** means that not only does the collection have order, but the order depends on the value of the element. A __SortedSet__ is an example.
