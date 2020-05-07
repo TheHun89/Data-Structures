@@ -24,12 +24,22 @@
 | A set for mathematical functions  | HashSet<T> SortedSet<T>  |   | ImmutableHashSet<T> ImmutableSortedSet<T>  |
 
 
-Java uses *java.Utils* package
+Java uses *java.Utils* package.
+C# uses *System.Collections* namespace.
 
-C# uses *System.Collections* namespace
-
-->Ordered vs Sorted<-
+**Ordered vs Sorted**
 
 An **ordered collection** means that the elements of the collection have a specific order based on the sequence inserted. The order is independent of the value. A __List__ is an example.
 A **sorted collection** means that not only does the collection have order, but the order depends on the value of the element. A __SortedSet__ is an example.
 In contrast, a **collection without any order** can maintain the elements in any order. A __Set__ is an example.
+
+
+
+NOTE:  It’s always best to declare what type the collection contains so that errors are caught at compile time and not run time.
+
+NOTE:  **Synchronized** means accessible by multiple threads (thread safe).
+
+**Traversing Collections**:
+1.	Aggregate operations: Java uses Streams (1.8) and C# uses LINQ to query in-memory objects.
+2.	Foreach construct
+3.	Iterators – calling collection’s iterator method (ie: .next(), .hasNext()); C# uses IEnumberable/IEnumerator and Java uses Iterable/Iterator interface.
