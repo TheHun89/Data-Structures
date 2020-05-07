@@ -82,7 +82,7 @@ C# interfaces:
 	**IComparator**
 
 
-###Array
+### Array
 * Store a fixed size sequential collection of elements of the same type
 * Accessible by indexes
 * Faster, better performance than ArrayList
@@ -91,7 +91,7 @@ C# interfaces:
 * Can NOT make array final
 * [Array vs ArrayList](https://programming.guide/java/array-vs-arraylist.html)
 
-###ArrayList
+### ArrayList
 * Use when you don’t know the size of the array
 * Dynamic scaling
 * Does NOT store primitive types
@@ -102,14 +102,47 @@ C# interfaces:
 * ArrayList – not synchronized, not thread safe
 * NOTE:  If multiple threads access an ArrayList instance concurrently, and at least one of the threads modifies the list structurally, it must be synchronized externally.
 
-###Stack
+### Stack
 * Last in first out / First in last out
 * Push – Pop
 * Empty, Search, Peek
 * Can contain null
 
-###Queue:  
+### Queue:  
 * First in first out
 * Poll, Remove, Peek, Element
 **Priority Queue**
 * PriorityQueue elements are ordered by either Natural ordering OR by use of Comparator used at construction
+
+### String
+* char primitive type
+* String class – immutable, synchronized/thread safe, fast
+* StringBuilder – mutable, not synchronized/not thread safe
+* StringBuffer – mutable, synchronized/thread safe (multiple threads can call the methods of SB simultaneously)
+* [Oracle - String](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html)
+
+
+### LinkedList
+* Linked nodes to store and retrieve elements with references to previous and next nodes
+* Single – node has two fields: data and next
+* Circular – Single but contains head and tail
+* Double – node has three fields: previous, data and next
+
+**LinkedList** vs **ArrayList**
+**ArrayList** – access elements by index, less memory and in most cases outperforms
+**LinkedList** – elements put into Node objects, more efficient when you have lots of insertions/deletions in different parts of list especially if list is large
+
+### Set
+* NO Order to elements returned
+* Collection of distinct, non-equal objects with no structure
+* No two elements can be equal (ie: e1.equals(e2)
+**TreeSet** – produces elements in order according to some predefined Comparator
+
+**HashSet vs HashMap vs HashTable**
+**HashSet** –allows nulls, no duplicate values, no key/pair; {1, 2, 3, 4, 5, 6, 7}
+**HashMap** –allows null key and values, duplicate values but not keys, key/pair, non synchronized / not thread safe, can NOT be shared with multiple threads; {a -> 1, b -> 2, c -> 2, d -> 1}
+**HashTable** –no nulls or duplicates, synchronized / thread safe, can be shared with multiple threads
+
+
+### Tree
+**Binary** – recursive data structure where each node can have 2 children at most; every node has a value that is greater than or equal to the node values in the left sub-tree and less than or equal to the node values in the right sub-tree
