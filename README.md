@@ -45,7 +45,6 @@ NOTE:  **Synchronized** means accessible by multiple threads (thread safe).
 2.	Foreach construct
 3.	Iterators – calling collection’s iterator method (ie: .next(), .hasNext()); C# uses IEnumberable/IEnumerator and Java uses Iterable/Iterator interface.
 
-
 **Aggregate Operations**
 
 **Java**:
@@ -73,3 +72,44 @@ roster
 **Recursion** – stacking method call by calling itself, less code but higher time complexity, infinite recursion leads to CPU crash
 **Iteration** – looping, more code but less time complexity, infinite iteration leads to memory exhaustion
 *Use recursion for algorithms best explained recursively – trees, quicksort, DFS, divide and conquer, Tower of Hanoi, etc; use iteration for algorithms best explained iteratively - factorial.*
+
+**Comparing**
+Java interfaces:  [Baeldung - Comparable vs Comparator](https://www.baeldung.com/java-comparator-comparable)
+	**Comparable** – uses Natural Ordering
+	**Comparator** – allows for more customization to define multiple comparison strategies
+C# interfaces:  
+	**IComparable**
+	**IComparator**
+
+
+###Array
+* Store a fixed size sequential collection of elements of the same type
+* Accessible by indexes
+* Faster, better performance than ArrayList
+* Type safe – all members of same type
+* Store primitive types
+* Can NOT make array final
+* [Array vs ArrayList](https://programming.guide/java/array-vs-arraylist.html)
+
+###ArrayList
+* Use when you don’t know the size of the array
+* Dynamic scaling
+* Does NOT store primitive types
+* CAN make list final
+
+**Vector** vs **ArrayList**
+* Vector – synchronized, thread safe
+* ArrayList – not synchronized, not thread safe
+* NOTE:  If multiple threads access an ArrayList instance concurrently, and at least one of the threads modifies the list structurally, it must be synchronized externally.
+
+###Stack
+* Last in first out / First in last out
+* Push – Pop
+* Empty, Search, Peek
+* Can contain null
+
+###Queue:  
+* First in first out
+* Poll, Remove, Peek, Element
+**Priority Queue**
+* PriorityQueue elements are ordered by either Natural ordering OR by use of Comparator used at construction
