@@ -75,10 +75,15 @@ roster
 
 **Comparing**
 Java interfaces:  [Baeldung - Comparable vs Comparator](https://www.baeldung.com/java-comparator-comparable)
+
 	**Comparable** – uses Natural Ordering
+
 	**Comparator** – allows for more customization to define multiple comparison strategies
+
 C# interfaces:  
+
 	**IComparable**
+
 	**IComparator**
 
 
@@ -98,6 +103,7 @@ C# interfaces:
 * CAN make list final
 
 **Vector** vs **ArrayList**
+
 * Vector – synchronized, thread safe
 * ArrayList – not synchronized, not thread safe
 * NOTE:  If multiple threads access an ArrayList instance concurrently, and at least one of the threads modifies the list structurally, it must be synchronized externally.
@@ -111,7 +117,9 @@ C# interfaces:
 ### Queue:  
 * First in first out
 * Poll, Remove, Peek, Element
+
 **Priority Queue**
+
 * PriorityQueue elements are ordered by either Natural ordering OR by use of Comparator used at construction
 
 ### String
@@ -129,18 +137,24 @@ C# interfaces:
 * Double – node has three fields: previous, data and next
 
 **LinkedList** vs **ArrayList**
+
 **ArrayList** – access elements by index, less memory and in most cases outperforms
+
 **LinkedList** – elements put into Node objects, more efficient when you have lots of insertions/deletions in different parts of list especially if list is large
 
 ### Set
 * NO Order to elements returned
 * Collection of distinct, non-equal objects with no structure
 * No two elements can be equal (ie: e1.equals(e2)
+
 **TreeSet** – produces elements in order according to some predefined Comparator
 
 **HashSet vs HashMap vs HashTable**
+
 **HashSet** –allows nulls, no duplicate values, no key/pair; {1, 2, 3, 4, 5, 6, 7}
+
 **HashMap** –allows null key and values, duplicate values but not keys, key/pair, non synchronized / not thread safe, can NOT be shared with multiple threads; {a -> 1, b -> 2, c -> 2, d -> 1}
+
 **HashTable** –no nulls or duplicates, synchronized / thread safe, can be shared with multiple threads
 
 
