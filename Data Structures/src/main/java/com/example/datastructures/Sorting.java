@@ -59,15 +59,97 @@ public class Sorting {
         ArrayDemo.printArray(a);
     }
 
-    public void quickSort() {
+    // https://www.baeldung.com/java-quicksort
+    public static void quickSort(int arr[], int begin, int end)
+    {
+        if (begin < end) {
+            int partitionIndex = partition(arr, begin, end);
 
+            // Recursively sort elements of the 2 sub-arrays
+            quickSort(arr, begin, partitionIndex-1);
+            quickSort(arr, partitionIndex+1, end);
+        }
     }
 
-    public void mergeSort() {
+    private static int partition(int arr[], int begin, int end)
+    {
+        int pivot = arr[end];
+        int i = (begin-1);
 
+        for (int j=begin; j<end; j++)
+        {
+            if (arr[j] <= pivot) {
+                i++;
+
+                int swapTemp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = swapTemp;
+            }
+        }
+
+        int swapTemp = arr[i+1];
+        arr[i+1] = arr[end];
+        arr[end] = swapTemp;
+
+        return i+1;
+    }
+
+    public static void mergeSort(int[] a, int n) {
+        if (n < 2)
+            return;
+        int mid = n / 2;
+        int[] l = new int[mid];
+        int[] r = new int[n - mid];
+
+        for (int i = 0; i < mid; i++) {
+            l[i] = a[i];
+        }
+        for (int i = mid; i < n; i++) {
+            r[i - mid] = a[i];
+        }
+        mergeSort(l, mid);
+        mergeSort(r, n - mid);
+
+        merge(a, l, r, mid, n - mid);
+    }
+
+    public static void merge(int[] a, int[] l, int[] r, int left, int right) {
+
+        int i = 0, j = 0, k = 0;
+
+        while (i < left && j < right) {
+
+            if (l[i] <= r[j])
+                a[k++] = l[i++];
+            else
+                a[k++] = r[j++];
+
+        }
+
+        while (i < left)
+            a[k++] = l[i++];
+
+        while (j < right)
+            a[k++] = r[j++];
     }
 
     public void heapSort() {
 
+    }
+
+    public static void shellSort(int arrayToSort[]) {
+        int n = arrayToSort.length;
+
+        for (int gap = n / 2; gap > 0; gap /= 2) {
+            for (int i = gap; i < n; i++) {
+                int key = arrayToSort[i];
+                int j = i;
+                while (j >= gap && arrayToSort[j - gap] > key) {
+                    arrayToSort[j] = arrayToSort[j - gap];
+                    j -= gap;
+                }
+                arrayToSort[j] = key;
+            }
+        }
     }
 }

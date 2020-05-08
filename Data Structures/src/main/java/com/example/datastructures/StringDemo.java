@@ -6,7 +6,6 @@ import java.util.HashMap;
 public class StringDemo {
 
     // https://www.geeksforgeeks.org/string-vs-stringbuilder-vs-stringbuffer-in-java/
-
     public StringBuilder duplicateCharacters( String s) {
 
         HashMap<Character, Integer> hashMap = new HashMap<>();
@@ -26,8 +25,7 @@ public class StringDemo {
     }
 
     // https://www.baeldung.com/java-strings-anagrams
-    // O(NlogN)
-    public boolean isAnagram( String first, String second ) {
+    public boolean isAnagramSorting( String first, String second ) {
         if (first.length() != second.length()) { return false;}
 
         char[] firstArray = first.toLowerCase().toCharArray();
@@ -40,6 +38,27 @@ public class StringDemo {
         System.out.println(secondArray);
 
         return Arrays.equals(firstArray, secondArray);
+    }
+
+    public boolean isAnagramCounting(String string1, String string2) {
+
+        int CHARACTER_RANGE = 256;
+
+        if (string1.length() != string2.length()) { return false; }
+
+        int[] count = new int[CHARACTER_RANGE];
+
+        for (int i = 0; i < string1.length(); i++) {
+            count[string1.charAt(i)]++;
+            count[string2.charAt(i)]--;
+        }
+
+        for (int i = 0; i < CHARACTER_RANGE; i++) {
+            if (count[i] != 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     // Cheat - new StringBuilder(s).reverse().toString() or new StringBuffer(s).reverse().toString();

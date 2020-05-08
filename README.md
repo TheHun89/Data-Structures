@@ -160,3 +160,5 @@ C# interfaces:
 
 ### Tree
 **Binary** – recursive data structure where each node can have 2 children at most; every node has a value that is greater than or equal to the node values in the left sub-tree and less than or equal to the node values in the right sub-tree
+
+![Image](https://www.baeldung.com/wp-content/uploads/2017/12/Tree-1.jpg)
