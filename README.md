@@ -10,6 +10,9 @@
 
 [Microsoft - C# Collections](https://docs.microsoft.com/en-us/dotnet/standard/collections/)
 
+![Image](https://media.geeksforgeeks.org/wp-content/uploads/java-collection.jpg)
+
+
 ### Choosing a Collection in C#
 
 | I want to…  | Generic collections  |  Non-generic collections |  Thread-safe or immutable collections |
@@ -141,6 +144,11 @@ C# interfaces:
 **ArrayList** – access elements by index, less memory and in most cases outperforms
 
 **LinkedList** – elements put into Node objects, more efficient when you have lots of insertions/deletions in different parts of list especially if list is large
+
+### LinkedHashMap
+* combination of HashMap and a Queue
+* stores key/value pairs but also remembers the order in which they were inserted
+
 
 ### Set
 * NO Order to elements returned
