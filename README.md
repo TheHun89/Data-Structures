@@ -8,9 +8,13 @@
 
 [Baeldung - Java Collections Interview Questions](https://www.baeldung.com/java-collections-interview-questions)
 
-[Microsoft - C# Collections](https://docs.microsoft.com/en-us/dotnet/standard/collections/)
+![Image](https://images.app.goo.gl/hAybHMjjZWDVYNNm8)
 
 ![Image](https://media.geeksforgeeks.org/wp-content/uploads/java-collection.jpg)
+
+[Microsoft - C# Collections](https://docs.microsoft.com/en-us/dotnet/standard/collections/)
+
+![Image](https://images.app.goo.gl/RfqMQxfsf6Jztz8y7)
 
 
 ### Choosing a Collection in C#
@@ -37,6 +41,7 @@ An **ordered collection** means that the elements of the collection have a speci
 A **sorted collection** means that not only does the collection have order, but the order depends on the value of the element. A __SortedSet__ is an example.
 In contrast, a **collection without any order** can maintain the elements in any order. A __Set__ is an example.
 
+![Image](https://images.app.goo.gl/yxdU6gowBj5Qxc9D9)
 
 
 NOTE:  It’s always best to declare what type the collection contains so that errors are caught at compile time and not run time.
@@ -99,6 +104,8 @@ C# interfaces:
 * Can NOT make array final
 * [Array vs ArrayList](https://programming.guide/java/array-vs-arraylist.html)
 
+![Image](https://images.app.goo.gl/933C6Lx7XVR1kE1j8)
+
 ### ArrayList
 * Use when you don’t know the size of the array
 * Dynamic scaling
@@ -117,6 +124,8 @@ C# interfaces:
 * Empty, Search, Peek
 * Can contain null
 
+![Image](https://images.app.goo.gl/3mtrCv3WhkZggs1j7)
+
 ### Queue:  
 * First in first out
 * Poll, Remove, Peek, Element
@@ -124,6 +133,8 @@ C# interfaces:
 **Priority Queue**
 
 * PriorityQueue elements are ordered by either Natural ordering OR by use of Comparator used at construction
+
+![Image](https://images.app.goo.gl/Miuhh1JN2VLsRB3R7)
 
 ### String
 * char primitive type
@@ -138,6 +149,8 @@ C# interfaces:
 * Single – node has two fields: data and next
 * Circular – Single but contains head and tail
 * Double – node has three fields: previous, data and next
+
+![Image](https://images.app.goo.gl/4G78hiMjgDKBcpaYA)
 
 **LinkedList** vs **ArrayList**
 
