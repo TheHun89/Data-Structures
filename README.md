@@ -134,7 +134,7 @@ C# interfaces:
 
 * PriorityQueue elements are ordered by either Natural ordering OR by use of Comparator used at construction
 
-![Image](https://images.app.goo.gl/Miuhh1JN2VLsRB3R7)
+![Image](https://howtodoinjava.com/wp-content/uploads/2018/10/priority-queue-pattern.png)
 
 ### String
 * char primitive type
