@@ -8,13 +8,13 @@
 
 [Baeldung - Java Collections Interview Questions](https://www.baeldung.com/java-collections-interview-questions)
 
-![Image](https://images.app.goo.gl/hAybHMjjZWDVYNNm8)
-
 ![Image](https://media.geeksforgeeks.org/wp-content/uploads/java-collection.jpg)
 
 [Microsoft - C# Collections](https://docs.microsoft.com/en-us/dotnet/standard/collections/)
 
-![Image](https://images.app.goo.gl/RfqMQxfsf6Jztz8y7)
+![Image](https://media.geeksforgeeks.org/wp-content/uploads/Untitled-Diagram-20.jpg)
+
+![Image](https://www.tutorialsteacher.com/Content/images/csharp/generic-collections.jpg)
 
 
 ### Choosing a Collection in C#
@@ -41,7 +41,7 @@ An **ordered collection** means that the elements of the collection have a speci
 A **sorted collection** means that not only does the collection have order, but the order depends on the value of the element. A __SortedSet__ is an example.
 In contrast, a **collection without any order** can maintain the elements in any order. A __Set__ is an example.
 
-![Image](https://images.app.goo.gl/yxdU6gowBj5Qxc9D9)
+![Image](https://4.bp.blogspot.com/-V-rvs9vZVtI/WVUhbcYjORI/AAAAAAAAI9A/k5TJVIumbC0_KETzR_vPZ33gN4viR6obgCLcBGAs/s280/Java%2BCollection%2BSummary%2B.jpg)
 
 
 NOTE:  It’s always best to declare what type the collection contains so that errors are caught at compile time and not run time.
@@ -104,7 +104,7 @@ C# interfaces:
 * Can NOT make array final
 * [Array vs ArrayList](https://programming.guide/java/array-vs-arraylist.html)
 
-![Image](https://images.app.goo.gl/933C6Lx7XVR1kE1j8)
+![Image](https://docs.oracle.com/javase/tutorial/figures/java/objects-tenElementArray.gif)
 
 ### ArrayList
 * Use when you don’t know the size of the array
@@ -124,7 +124,7 @@ C# interfaces:
 * Empty, Search, Peek
 * Can contain null
 
-![Image](https://images.app.goo.gl/3mtrCv3WhkZggs1j7)
+![Image](https://media.geeksforgeeks.org/wp-content/uploads/Selection_028.png)
 
 ### Queue:  
 * First in first out
@@ -150,7 +150,7 @@ C# interfaces:
 * Circular – Single but contains head and tail
 * Double – node has three fields: previous, data and next
 
-![Image](https://images.app.goo.gl/4G78hiMjgDKBcpaYA)
+![Image](https://www.geeksforgeeks.org/wp-content/uploads/gq/2013/03/Linkedlist.png)
 
 **LinkedList** vs **ArrayList**
 
