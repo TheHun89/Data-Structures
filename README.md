@@ -61,6 +61,7 @@ NOTE:  **Synchronized** means accessible by multiple threads (thread safe).
 1.	Source
 2.	Zero or more intermediate operations that produce a stream  ie: filter
 3.	Terminal operation that produces a non-stream result such as a primitive value, a collection or no value at all  ie: forEach
+
 **Stream** – sequence of elements; it is not a data structure; carries values from a source through a pipeline
 
 **Reduction** – JDK terminal operations (such as average, sum, min, max, and count) that return one value by combining the contents of a stream
@@ -79,6 +80,7 @@ roster
 
 **Recursion** – stacking method call by calling itself, less code but higher time complexity, infinite recursion leads to CPU crash
 **Iteration** – looping, more code but less time complexity, infinite iteration leads to memory exhaustion
+
 *Use recursion for algorithms best explained recursively – trees, quicksort, DFS, divide and conquer, Tower of Hanoi, etc; use iteration for algorithms best explained iteratively - factorial.*
 
 **Comparing**
@@ -183,3 +185,17 @@ C# interfaces:
 **Binary** – recursive data structure where each node can have 2 children at most; every node has a value that is greater than or equal to the node values in the left sub-tree and less than or equal to the node values in the right sub-tree
 
 ![Image](https://www.baeldung.com/wp-content/uploads/2017/12/Tree-1.jpg)
+
+
+
+Key Words
+Anagram – string has the exact same characters as another
+Palindrome – string is the same in reverse order
+GCD
+Fibonacci sequence – 0, 1, 1, 2, 3, 5, 8, 13, 21, 24, 55…
+    Fn = Fn-1 + Fn-2
+with seed values
+   F0 = 0 and F1 = 1
+
+
+Algorithms
