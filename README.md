@@ -69,7 +69,6 @@ NOTE:  **Synchronized** means accessible by multiple threads (thread safe).
 **Parallelism** – dividing a problem into subproblems, solving those problems simultaneously (in parallel, with each subproblem running in a separate thread), and then combining the results of the solutions to the subproblems
 
 ```
-# code block
 roster
     .stream()
     .filter(e -> e.getGender() == Person.Sex.MALE)
@@ -86,9 +85,88 @@ roster
 **Comparing**
 Java interfaces:  [Baeldung - Comparable vs Comparator](https://www.baeldung.com/java-comparator-comparable)
 
-	**Comparable** – uses Natural Ordering
+**Comparable** – uses Natural Ordering
 
-	**Comparator** – allows for more customization to define multiple comparison strategies
+**Comparator** – allows for more customization to define multiple comparison strategies
+    
+```
+public static void main(String[] args) {
+List<Player> footballTeam = new ArrayList<>();
+Player player1 = new Player(59, "John", 20);
+Player player2 = new Player(67, "Roger", 22);
+Player player3 = new Player(45, "Steven", 24);
+footballTeam.add(player1);
+footballTeam.add(player2);
+footballTeam.add(player3);
+
+System.out.println("Before Sorting : " + footballTeam);
+Collections.sort(footballTeam);
+System.out.println("After Sorting : " + footballTeam);
+}
+
+
+
+public class Player {
+    private int ranking;
+    private String name;
+    private int age;
+    
+    // constructor, getters, setters  
+}
+
+public class Player implements Comparable<Player> {
+ 
+    // same properties and methods as before
+ 
+    @Override
+    public int compareTo(Player otherPlayer) {
+        return Integer.compare(getRanking(), otherPlayer.getRanking());
+    }
+
+}
+
+
+Before Sorting : [John, Roger, Steven]
+After Sorting : [Steven, John, Roger]
+
+
+public class PlayerRankingComparator implements Comparator<Player> {
+ 
+    @Override
+    public int compare(Player firstPlayer, Player secondPlayer) {
+       return Integer.compare(firstPlayer.getRanking(), secondPlayer.getRanking());
+    }
+ 
+}
+
+public class PlayerAgeComparator implements Comparator<Player> {
+ 
+    @Override
+    public int compare(Player firstPlayer, Player secondPlayer) {
+       return Integer.compare(firstPlayer.getAge(), secondPlayer.getAge());
+    }
+ 
+}
+
+
+Using this approach, we can override the natural ordering:
+
+PlayerRankingComparator playerComparator = new PlayerRankingComparator();
+Collections.sort(footballTeam, playerComparator);
+
+Before Sorting : [John, Roger, Steven]
+After Sorting by ranking : [Steven, John, Roger]
+
+
+PlayerAgeComparator playerComparator = new PlayerAgeComparator();
+Collections.sort(footballTeam, playerComparator);
+Now, when we run our PlayerAgeSorter, we can see a different sort order by age:
+
+Before Sorting : [John, Roger, Steven]
+After Sorting by age : [Roger, John, Steven]
+
+```
+    
 
 C# interfaces:  
 
