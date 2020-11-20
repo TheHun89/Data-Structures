@@ -248,15 +248,55 @@ C# interfaces:
 * Collection of distinct, non-equal objects with no structure
 * No two elements can be equal (ie: e1.equals(e2)
 
-**TreeSet** – produces elements in order according to some predefined Comparator
+**TreeSet** – ordered via some predefined Comparator
 
 **HashSet vs HashMap vs HashTable**
 
 **HashSet** –allows nulls, no duplicate values, no key/pair; {1, 2, 3, 4, 5, 6, 7}
 
-**HashMap** –allows null key and values, duplicate values but not keys, key/pair, non synchronized / not thread safe, can NOT be shared with multiple threads; {a -> 1, b -> 2, c -> 2, d -> 1}
+**HashMap** –allows null key and values, duplicate values but not keys, key/pair, non synchronized / not thread safe, can NOT be shared with multiple threads; no order; implements Cloneable and Serializable interface;  {a -> 1, b -> 2, c -> 2, d -> 1}
 
 **HashTable** –no nulls or duplicates, synchronized / thread safe, can be shared with multiple threads
+
+
+
+
+
+**Performance of HashMap**
+Performance of HashMap depends on 2 parameters: 
+
+1. **Initial Capacity** – It is the capacity of HashMap at the time of its creation (It is the number of buckets a HashMap can hold when the HashMap is instantiated). In java, it is 2^4=16 initially, meaning it can hold 16 key-value pairs. 
+
+2. **Load Factor** – It is the percent value of the capacity after which the capacity of Hashmap is to be increased (It is the percentage fill of buckets after which Rehashing takes place). In java, it is 0.75f by default, meaning the rehashing takes place after filling 75% of the capacity. 
+
+Threshold – It is the product of Load Factor and Initial Capacity. In java, by default, it is (16 * 0.75 = 12). That is, Rehashing takes place after inserting 12 key-value pairs into the HashMap.
+
+Rehashing – It is the process of doubling the capacity of the HashMap after it reaches its Threshold. In java, HashMap continues to rehash(by default) in the following sequence – 2^4, 2^5, 2^6, 2^7, …. so on. 
+ 
+If the initial capacity is kept higher then rehashing will never be done. But by keeping it higher increases the time complexity of iteration. So it should be chosen very cleverly to increase performance. The expected number of values should be taken into account to set initial capacity. The most generally preferred load factor value is 0.75 which provides a good deal between time and space costs. Load factor’s value varies between 0 and 1. 
+ 
+
+**Synchronized HashMap**
+As it is told that HashMap is unsynchronized i.e. multiple threads can access it simultaneously. If multiple threads access this class simultaneously and at least one thread manipulates it structurally then it is necessary to make it synchronized externally. It is done by synchronizing some object which encapsulates the map. If No such object exists then it can be wrapped around Collections.synchronizedMap() to make HashMap synchronized and avoid accidental unsynchronized access. As in the following example: 
+ 
+
+```
+Map m = Collections.synchronizedMap(new HashMap(...));
+```
+Now the Map m is synchronized. 
+
+
+
+
+
+
+**Fail-fast vs fail-safe iterators**
+Iterators for different collections are either fail-fast or fail-safe, depending on how they react to concurrent modifications. 
+
+Fail-fast iterators (those returned by HashMap, ArrayList, and other non-thread-safe collections) iterate over the collection's internal data structure, and they throw ConcurrentModificationException as soon as they detect a concurrent modification.
+
+Fail-safe iterators (returned by thread-safe collections such as ConcurrentHashMap, CopyOnWriteArrayList) create a copy of the structure they iterate upon. They guarantee safety from concurrent modifications. Their drawbacks include excessive memory consumption and iteration over possibly out-of-date data in case the collection was modified.
+
 
 
 ### Tree
