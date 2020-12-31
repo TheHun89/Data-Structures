@@ -180,7 +180,7 @@ C# interfaces:
 * Accessible by indexes
 * Faster, better performance than ArrayList
 * Type safe – all members of same type
-* Store primitive types
+* Store primitive OR reference types
 * Can NOT make array final
 * [Array vs ArrayList](https://programming.guide/java/array-vs-arraylist.html)
 
@@ -195,7 +195,7 @@ System.out.println("Element at index 0: " + anArray[0]);
 ### ArrayList
 * Use when you don’t know the size of the array
 * Dynamic scaling
-* Does NOT store primitive types
+* Does NOT store primitive types; only stores reference types
 * CAN make list final
 
 ```
