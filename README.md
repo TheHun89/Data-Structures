@@ -185,7 +185,7 @@ C# interfaces:
 * [Array vs ArrayList](https://programming.guide/java/array-vs-arraylist.html)
 
 ```
-int[] anArray = anArray = new int[10];
+int[] anArray = new int[10];
 anArray[0] = 100;
 anArray[1] = 200;
 System.out.println("Element at index 0: " + anArray[0]);
