@@ -77,8 +77,8 @@ roster
 
 **Recursion vs Iteration**
 
-**Recursion** – stacking method call by calling itself, less code but higher time complexity, infinite recursion leads to CPU crash
-**Iteration** – looping, more code but less time complexity, infinite iteration leads to memory exhaustion
+* **Recursion** – stacking method call by calling itself, less code but higher time complexity, infinite recursion leads to CPU crash
+* **Iteration** – looping, more code but less time complexity, infinite iteration leads to memory exhaustion
 
 *Use recursion for algorithms best explained recursively – trees, quicksort, DFS, divide and conquer, Tower of Hanoi, etc; use iteration for algorithms best explained iteratively - factorial.*
 
@@ -184,13 +184,39 @@ C# interfaces:
 * Can NOT make array final
 * [Array vs ArrayList](https://programming.guide/java/array-vs-arraylist.html)
 
-![Image](https://docs.oracle.com/javase/tutorial/figures/java/objects-tenElementArray.gif)
+```
+int[] anArray = anArray = new int[10];
+anArray[0] = 100;
+anArray[1] = 200;
+System.out.println("Element at index 0: " + anArray[0]);
+```
+
 
 ### ArrayList
 * Use when you don’t know the size of the array
 * Dynamic scaling
 * Does NOT store primitive types
 * CAN make list final
+
+```
+int n = 5; 
+
+// Declaring the ArrayList with initial size n 
+ArrayList<Integer> arrli = new ArrayList<Integer>(n); 
+
+// Appending new elements at the end of the list 
+for (int i = 1; i <= n; i++) 
+    arrli.add(i); 
+
+arrli.remove(3); 
+
+// Displaying the ArrayList after deletion 
+System.out.println(arrli); 
+
+// Printing elements one by one 
+for (int i = 0; i < arrli.size(); i++) 
+    System.out.print(arrli.get(i) + " "); 
+```
 
 **Vector** vs **ArrayList**
 
