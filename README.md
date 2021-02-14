@@ -1,4 +1,4 @@
-## Data Structures - Java and C#
+## Data Structures - Java
 ---
 
 ### Description
